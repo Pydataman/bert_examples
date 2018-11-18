@@ -1,0 +1,13 @@
+export BERT_BASE_DIR=/path/bert/uncased_L-12_H-768_A-12
+export QUORA_DIR=/path/kaggle/quora/data
+export TRAINED_CLASSIFIER=/path/quora/data/result
+CUDA_VISIBLE_DEVICES=0 	python3 ./bert/run_classifier.py \
+	  --task_name=kaggle-quora \
+	    --do_train=false \
+	      --do_predict=true \
+	        --data_dir=$QUORA_DIR/ \
+		  --vocab_file=$BERT_BASE_DIR/vocab.txt \
+		    --bert_config_file=$BERT_BASE_DIR/bert_config.json \
+		      --init_checkpoint=$TRAINED_CLASSIFIER/model.ckpt \
+		        --max_seq_length=128 \
+			  --output_dir=$QUORA_DIR/result/ 
