@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Time    : 2018/11/16 17:23
-# @Author  : liu pengfei
-# @FileName: run_ner.py
-
 # coding=utf-8
 # Copyright 2018 The Google AI Language Team Authors.
 #
